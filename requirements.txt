@@ -1,0 +1,23 @@
+# ============================================
+# SuperSimpleNet 工业无监督缺陷检测系统
+# 依赖环境配置文件
+# 安装: pip install -r requirements.txt
+# ============================================
+
+# ---- PyTorch (GPU版本请根据CUDA版本自行安装) ----
+# CPU版本: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# CUDA 11.8: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# CUDA 12.1: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0.0
+torchvision>=0.15.0
+
+# ---- GUI框架 ----
+PyQt5>=5.15.0
+
+# ---- 图像处理 ----
+opencv-python>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# ---- 工具库 ----
+tqdm>=4.65.0
