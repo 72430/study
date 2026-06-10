@@ -1,0 +1,25 @@
+{
+    "data_path": "E:/Code/study/datas/ok",
+    "image_size": [
+        224,
+        224
+    ],
+    "batch_size": 16,
+    "num_workers": 0,
+    "backbone": "resnet50",
+    "embedding_dim": 128,
+    "pretrained": true,
+    "epochs": 100,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "momentum": 0.9,
+    "lr_scheduler": "cosine",
+    "lr_step_size": 30,
+    "lr_gamma": 0.1,
+    "loss_margin": 0.5,
+    "threshold": 0.06366309523582458,
+    "anomaly_mode": "score",
+    "checkpoint_dir": "E:\\Code\\study\\SuperSimpleNet-Defect-Detection\\checkpoints",
+    "log_dir": "E:\\Code\\study\\SuperSimpleNet-Defect-Detection\\logs",
+    "device": "auto"
+}
