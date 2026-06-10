@@ -1,0 +1,14 @@
+{
+    "model_deploy.pth": {
+        "name": "FeatureBank检测模型",
+        "backbone": "resnet50",
+        "method": "feature_bank",
+        "embedding_dim": 2048,
+        "ok_sample_count": 80,
+        "ok_score_mean": 0.029988745227456093,
+        "ok_score_std": 0.00801876001060009,
+        "suggested_threshold": 0.05404502525925636,
+        "system_version": "1.0.0",
+        "timestamp": "2026-06-10 17:06:17"
+    }
+}
