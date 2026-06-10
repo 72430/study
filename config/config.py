@@ -12,10 +12,24 @@ class TrainingConfig:
     """训练参数配置类，管理所有与训练相关的超参数"""
 
     def __init__(self):
-        # ---------- 特征库参数 ----------
+        # ---------- 数据参数 ----------
         self.data_path: str = ""                # 训练数据文件夹路径（仅OK样本）
         self.image_size: tuple = (224, 224)     # 输入图像尺寸 (height, width)
+        self.batch_size: int = 16               # 批处理大小
+        self.num_workers: int = 0               # 数据加载线程数（Windows建议为0）
+
+        # ---------- 模型参数 ----------
         self.backbone: str = "resnet50"         # 骨干网络: resnet18/34/50, wide_resnet50_2
+        self.embedding_dim: int = 128           # 嵌入向量维度
+        self.pretrained: bool = True            # 是否使用ImageNet预训练权重
+
+        # ---------- 训练参数 ----------
+        self.epochs: int = 100                  # 训练轮次（FeatureBank模式仅用1轮）
+        self.learning_rate: float = 0.001       # 学习率
+        self.weight_decay: float = 1e-5         # 权重衰减
+        self.lr_scheduler: str = "cosine"       # 学习率调度器: cosine/step/plateau
+        self.lr_step_size: int = 30             # StepLR步长
+        self.lr_gamma: float = 0.1              # 学习率衰减系数
 
         # ---------- 推理参数 ----------
         self.threshold: float = 0.05            # 异常判定阈值（由训练自动计算）
